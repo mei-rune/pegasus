@@ -108,6 +108,12 @@
 # error "<Pegasus/Common/Config.h>: Unsupported Platform"
 #endif
 
+
+#ifndef PEGASUS_STRING_NO_UTF8
+# define PEGASUS_STRING_NO_UTF8 /* empty */
+#endif
+
+
 /*
 //
 // COMPILER Checks

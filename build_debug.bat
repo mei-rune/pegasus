@@ -75,7 +75,7 @@ copy /Y bin\*.dll %release_dir%\bin\
 
 cd %PEGASUS_ROOT%
 set OPENSSL_CONF=%OPENSSL_HOME%/apps/openssl.cnf
-make -d build
+make build
 @if errorlevel 1 goto failed
 echo build ok!
 @cd %~dp0

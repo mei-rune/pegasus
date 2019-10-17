@@ -268,7 +268,27 @@ static inline size_t _convert(
     _copy(p, q, n);
     return n;
 #else
-    return _copyFromUTF8(p, q, n, utf8_error_index);
+
+	/**
+	int textlen = MultiByteToWideChar(CP_ACP, 0, q, n, NULL, 0);
+	wchar_t* result = (wchar_t *)malloc((textlen + 1) * sizeof(wchar_t));
+	memset(result, 0, (textlen + 1) * sizeof(wchar_t));
+	textlen = MultiByteToWideChar(CP_ACP, 0, q, n, (LPWSTR)result, textlen);
+
+	int utf8len = WideCharToMultiByte(CP_UTF8, 0, result, textlen, NULL, 0, 0, 0);
+	char* utf8result = (char *)malloc((utf8len + 1) * sizeof(char));
+	memset(utf8result, 0, (utf8len + 1) * sizeof(char));
+	utf8len = WideCharToMultiByte(CP_UTF8, 0, (LPWSTR)result, textlen, utf8result, utf8len, 0, 0);
+
+    size_t size = _copyFromUTF8(p, utf8result, utf8len, utf8_error_index);
+
+	free(result);
+	free(utf8result);
+
+	return size;
+	**/
+
+	return _copyFromUTF8(p, q, n, utf8_error_index);
 #endif
 }
 

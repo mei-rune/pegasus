@@ -34,3 +34,10 @@
 debug
 debug_2
 .vs
+*.vcxproj.user
+
+sqlite3/sqlite3.h 
+sqlite3/libsqlite3.exp
+sqlite3/libsqlite3.lib
+sqlite3/include/sqlite3.h
+sqlite3/lib/libsqlite3.lib
