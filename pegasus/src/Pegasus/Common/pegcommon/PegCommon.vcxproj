@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\AcceptLanguageList.h" />
+    <ClInclude Include="..\AnonymousPipe.h" />
+    <ClInclude Include="..\Array.h" />
+    <ClInclude Include="..\ArrayImpl.h" />
+    <ClInclude Include="..\ArrayInter.h" />
+    <ClInclude Include="..\ArrayInternal.h" />
+    <ClInclude Include="..\ArrayIterator.h" />
+    <ClInclude Include="..\ArrayRep.h" />
+    <ClInclude Include="..\AsyncOpNode.h" />
+    <ClInclude Include="..\AsyncQueue.h" />
+    <ClInclude Include="..\AsyncRequestExecutor.h" />
+    <ClInclude Include="..\AtomicInt.h" />
+    <ClInclude Include="..\Attribute.h" />
+    <ClInclude Include="..\AuditLogger.h" />
+    <ClInclude Include="..\Audit_zOS_SMF.h" />
+    <ClInclude Include="..\Audit_zOS_SMFStructures.h" />
+    <ClInclude Include="..\AuthenticationInfo.h" />
+    <ClInclude Include="..\AuthenticationInfoRep.h" />
+    <ClInclude Include="..\AuthHandle.h" />
+    <ClInclude Include="..\AutoPtr.h" />
+    <ClInclude Include="..\Base64.h" />
+    <ClInclude Include="..\BinaryCodec.h" />
+    <ClInclude Include="..\Buffer.h" />
+    <ClInclude Include="..\Char16.h" />
+    <ClInclude Include="..\Char16Inline.h" />
+    <ClInclude Include="..\CharSet.h" />
+    <ClInclude Include="..\CIMBinMsgDeserializer.h" />
+    <ClInclude Include="..\CIMBinMsgSerializer.h" />
+    <ClInclude Include="..\CIMBuffer.h" />
+    <ClInclude Include="..\CIMClass.h" />
+    <ClInclude Include="..\CIMClassRep.h" />
+    <ClInclude Include="..\CIMDateTime.h" />
+    <ClInclude Include="..\CIMDateTimeInline.h" />
+    <ClInclude Include="..\CIMDateTimeRep.h" />
+    <ClInclude Include="..\CIMExceptionRep.h" />
+    <ClInclude Include="..\CIMFlavor.h" />
+    <ClInclude Include="..\CIMIndication.h" />
+    <ClInclude Include="..\CIMInstance.h" />
+    <ClInclude Include="..\CIMInstanceRep.h" />
+    <ClInclude Include="..\CIMInternalXmlEncoder.h" />
+    <ClInclude Include="..\CIMKeyBindingRep.h" />
+    <ClInclude Include="..\CIMMessage.h" />
+    <ClInclude Include="..\CIMMethod.h" />
+    <ClInclude Include="..\CIMMethodRep.h" />
+    <ClInclude Include="..\CIMName.h" />
+    <ClInclude Include="..\CIMNameCast.h" />
+    <ClInclude Include="..\CIMNameInline.h" />
+    <ClInclude Include="..\CIMObject.h" />
+    <ClInclude Include="..\CIMObjectPath.h" />
+    <ClInclude Include="..\CIMObjectPathRep.h" />
+    <ClInclude Include="..\CIMObjectRep.h" />
+    <ClInclude Include="..\Cimom.h" />
+    <ClInclude Include="..\CimomMessage.h" />
+    <ClInclude Include="..\CIMOperationType.h" />
+    <ClInclude Include="..\CIMParameter.h" />
+    <ClInclude Include="..\CIMParameterRep.h" />
+    <ClInclude Include="..\CIMParamValue.h" />
+    <ClInclude Include="..\CIMParamValueRep.h" />
+    <ClInclude Include="..\CIMProperty.h" />
+    <ClInclude Include="..\CIMPropertyInternal.h" />
+    <ClInclude Include="..\CIMPropertyList.h" />
+    <ClInclude Include="..\CIMPropertyListRep.h" />
+    <ClInclude Include="..\CIMPropertyRep.h" />
+    <ClInclude Include="..\CIMQualifier.h" />
+    <ClInclude Include="..\CIMQualifierDecl.h" />
+    <ClInclude Include="..\CIMQualifierDeclRep.h" />
+    <ClInclude Include="..\CIMQualifierList.h" />
+    <ClInclude Include="..\CIMQualifierNames.h" />
+    <ClInclude Include="..\CIMQualifierRep.h" />
+    <ClInclude Include="..\CIMResponseData.h" />
+    <ClInclude Include="..\CIMScope.h" />
+    <ClInclude Include="..\CIMServerDescription.h" />
+    <ClInclude Include="..\CIMStatusCode.h" />
+    <ClInclude Include="..\CIMType.h" />
+    <ClInclude Include="..\CIMValue.h" />
+    <ClInclude Include="..\CIMValueInline.h" />
+    <ClInclude Include="..\CIMValueRep.h" />
+    <ClInclude Include="..\CommonUTF.h" />
+    <ClInclude Include="..\Condition.h" />
+    <ClInclude Include="..\Config.h" />
+    <ClInclude Include="..\Constants.h" />
+    <ClInclude Include="..\ContentLanguageList.h" />
+    <ClInclude Include="..\DeclContext.h" />
+    <ClInclude Include="..\Dir.h" />
+    <ClInclude Include="..\Exception.h" />
+    <ClInclude Include="..\ExceptionRep.h" />
+    <ClInclude Include="..\Executor.h" />
+    <ClInclude Include="..\FileSystem.h" />
+    <ClInclude Include="..\Formatter.h" />
+    <ClInclude Include="..\HashTable.h" />
+    <ClInclude Include="..\HostAddress.h" />
+    <ClInclude Include="..\HostLocator.h" />
+    <ClInclude Include="..\HTTPAcceptor.h" />
+    <ClInclude Include="..\HTTPConnection.h" />
+    <ClInclude Include="..\HTTPConnector.h" />
+    <ClInclude Include="..\HTTPMessage.h" />
+    <ClInclude Include="..\IDFactory.h" />
+    <ClInclude Include="..\IndicationRouter.h" />
+    <ClInclude Include="..\InternalException.h" />
+    <ClInclude Include="..\LanguageParser.h" />
+    <ClInclude Include="..\LanguageTag.h" />
+    <ClInclude Include="..\Linkable.h" />
+    <ClInclude Include="..\Linkage.h" />
+    <ClInclude Include="..\List.h" />
+    <ClInclude Include="..\Logger.h" />
+    <ClInclude Include="..\Magic.h" />
+    <ClInclude Include="..\Memory.h" />
+    <ClInclude Include="..\Message.h" />
+    <ClInclude Include="..\MessageLoader.h" />
+    <ClInclude Include="..\MessageQueue.h" />
+    <ClInclude Include="..\MessageQueueService.h" />
+    <ClInclude Include="..\ModuleController.h" />
+    <ClInclude Include="..\Monitor.h" />
+    <ClInclude Include="..\Mutex.h" />
+    <ClInclude Include="..\Negotiate.h" />
+    <ClInclude Include="..\Network.h" />
+    <ClInclude Include="..\ObjectNormalizer.h" />
+    <ClInclude Include="..\Once.h" />
+    <ClInclude Include="..\OperationContext.h" />
+    <ClInclude Include="..\OperationContextInternal.h" />
+    <ClInclude Include="..\OrderedSet.h" />
+    <ClInclude Include="..\Pair.h" />
+    <ClInclude Include="..\PaseCcsid.h" />
+    <ClInclude Include="..\PegasusAssert.h" />
+    <ClInclude Include="..\PegasusAssertZOS.h" />
+    <ClInclude Include="..\PegasusVersion.h" />
+    <ClInclude Include="..\Pegasus_inl.h" />
+    <ClInclude Include="..\Platform_AIX_RS_IBMCXX.h" />
+    <ClInclude Include="..\Platform_DARWIN_GNU.h" />
+    <ClInclude Include="..\Platform_DARWIN_IX86_GNU.h" />
+    <ClInclude Include="..\Platform_DARWIN_PPC_GNU.h" />
+    <ClInclude Include="..\Platform_HPUX_IA64_ACC.h" />
+    <ClInclude Include="..\Platform_HPUX_IA64_GNU.h" />
+    <ClInclude Include="..\Platform_HPUX_PARISC_ACC.h" />
+    <ClInclude Include="..\Platform_HPUX_PARISC_GNU.h" />
+    <ClInclude Include="..\Platform_LINUX_AARCH64_GNU.h" />
+    <ClInclude Include="..\Platform_LINUX_IA64_GNU.h" />
+    <ClInclude Include="..\Platform_LINUX_IX86_CLANG.h" />
+    <ClInclude Include="..\Platform_LINUX_IX86_GNU.h" />
+    <ClInclude Include="..\Platform_LINUX_PPC64_GNU.h" />
+    <ClInclude Include="..\Platform_LINUX_PPC_E500_GNU.h" />
+    <ClInclude Include="..\Platform_LINUX_PPC_GNU.h" />
+    <ClInclude Include="..\Platform_LINUX_SH4_GNU.h" />
+    <ClInclude Include="..\Platform_LINUX_X86_64_CLANG.h" />
+    <ClInclude Include="..\Platform_LINUX_X86_64_GNU.h" />
+    <ClInclude Include="..\Platform_LINUX_XSCALE_GNU.h" />
+    <ClInclude Include="..\Platform_LINUX_ZSERIES64_GNU.h" />
+    <ClInclude Include="..\Platform_LINUX_ZSERIES_GNU.h" />
+    <ClInclude Include="..\Platform_PASE_ISERIES_IBMCXX.h" />
+    <ClInclude Include="..\Platform_SOLARIS_CC.h" />
+    <ClInclude Include="..\Platform_SOLARIS_IX86_CC.h" />
+    <ClInclude Include="..\Platform_SOLARIS_SPARC_CC.h" />
+    <ClInclude Include="..\Platform_SOLARIS_SPARC_CC_64.h" />
+    <ClInclude Include="..\Platform_SOLARIS_SPARC_GNU.h" />
+    <ClInclude Include="..\Platform_SOLARIS_X86_64_CC.h" />
+    <ClInclude Include="..\Platform_TRU64_ALPHA_DECCXX.h" />
+    <ClInclude Include="..\Platform_VMS.h" />
+    <ClInclude Include="..\Platform_VMS_ALPHA_DECCXX.h" />
+    <ClInclude Include="..\Platform_VMS_IA64_DECCXX.h" />
+    <ClInclude Include="..\Platform_WIN32_IX86_MSVC.h" />
+    <ClInclude Include="..\Platform_WIN64_IA64_MSVC.h" />
+    <ClInclude Include="..\Platform_WIN64_X86_64_MSVC.h" />
+    <ClInclude Include="..\Platform_ZOS_ZSERIES64_IBM.h" />
+    <ClInclude Include="..\Platform_ZOS_ZSERIES_IBM.h" />
+    <ClInclude Include="..\Print.h" />
+    <ClInclude Include="..\QueryExpressionRep.h" />
+    <ClInclude Include="..\ReadWriteSem.h" />
+    <ClInclude Include="..\Resolver.h" />
+    <ClInclude Include="..\ResponseHandler.h" />
+    <ClInclude Include="..\ResponseHandlerRep.h" />
+    <ClInclude Include="..\SCMO.h" />
+    <ClInclude Include="..\SCMOClass.h" />
+    <ClInclude Include="..\SCMOClassCache.h" />
+    <ClInclude Include="..\SCMODump.h" />
+    <ClInclude Include="..\SCMOInstance.h" />
+    <ClInclude Include="..\SCMOInternalXmlEncoder.h" />
+    <ClInclude Include="..\SCMOStreamer.h" />
+    <ClInclude Include="..\SCMOXmlWriter.h" />
+    <ClInclude Include="..\Semaphore.h" />
+    <ClInclude Include="..\Sharable.h" />
+    <ClInclude Include="..\SharedPtr.h" />
+    <ClInclude Include="..\Signal.h" />
+    <ClInclude Include="..\Socket.h" />
+    <ClInclude Include="..\SocketzOS_inline.h" />
+    <ClInclude Include="..\SpinLock.h" />
+    <ClInclude Include="..\SSLContext.h" />
+    <ClInclude Include="..\SSLContextRep.h" />
+    <ClInclude Include="..\Stack.h" />
+    <ClInclude Include="..\StatisticalData.h" />
+    <ClInclude Include="..\String.h" />
+    <ClInclude Include="..\StringConversion.h" />
+    <ClInclude Include="..\StringInline.h" />
+    <ClInclude Include="..\StringRep.h" />
+    <ClInclude Include="..\StrLit.h" />
+    <ClInclude Include="..\System.h" />
+    <ClInclude Include="..\Thread.h" />
+    <ClInclude Include="..\ThreadPool.h" />
+    <ClInclude Include="..\Threads.h" />
+    <ClInclude Include="..\Time.h" />
+    <ClInclude Include="..\TimeValue.h" />
+    <ClInclude Include="..\TLS.h" />
+    <ClInclude Include="..\TraceFileHandler.h" />
+    <ClInclude Include="..\TraceHandler.h" />
+    <ClInclude Include="..\TraceLogHandler.h" />
+    <ClInclude Include="..\TraceMemoryHandler.h" />
+    <ClInclude Include="..\Tracer.h" />
+    <ClInclude Include="..\TSDKey.h" />
+    <ClInclude Include="..\UintArgs.h" />
+    <ClInclude Include="..\UintArgsRep.h" />
+    <ClInclude Include="..\Union.h" />
+    <ClInclude Include="..\XmlConstants.h" />
+    <ClInclude Include="..\XmlGenerator.h" />
+    <ClInclude Include="..\XmlParser.h" />
+    <ClInclude Include="..\XmlReader.h" />
+    <ClInclude Include="..\XmlWriter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\AcceptLanguageList.cpp" />
+    <ClCompile Include="..\AnonymousPipe.cpp" />
+    <ClCompile Include="..\AnonymousPipeWindows.cpp" />
+    <ClCompile Include="..\Array.cpp" />
+    <ClCompile Include="..\AsyncOpNode.cpp" />
+    <ClCompile Include="..\AsyncQueue.cpp" />
+    <ClCompile Include="..\AsyncRequestExecutor.cpp" />
+    <ClCompile Include="..\AtomicInt.cpp" />
+    <ClCompile Include="..\Attribute.cpp" />
+    <ClCompile Include="..\AuditLogger.cpp" />
+    <ClCompile Include="..\AuditLoggerToLog.cpp" />
+    <ClCompile Include="..\AuditLoggerToSMF.cpp" />
+    <ClCompile Include="..\AuthenticationInfoRep.cpp" />
+    <ClCompile Include="..\AuthHandle.cpp" />
+    <ClCompile Include="..\Base64.cpp" />
+    <ClCompile Include="..\BinaryCodec.cpp" />
+    <ClCompile Include="..\Buffer.cpp" />
+    <ClCompile Include="..\Char16.cpp" />
+    <ClCompile Include="..\Char16Inline.cpp" />
+    <ClCompile Include="..\CharSet.cpp" />
+    <ClCompile Include="..\CIMBinMsgDeserializer.cpp" />
+    <ClCompile Include="..\CIMBinMsgSerializer.cpp" />
+    <ClCompile Include="..\CIMBuffer.cpp" />
+    <ClCompile Include="..\CIMClass.cpp" />
+    <ClCompile Include="..\CIMClassRep.cpp" />
+    <ClCompile Include="..\CIMDateTime.cpp" />
+    <ClCompile Include="..\CIMFlavor.cpp" />
+    <ClCompile Include="..\CIMInstance.cpp" />
+    <ClCompile Include="..\CIMInstanceRep.cpp" />
+    <ClCompile Include="..\CIMInternalXmlEncoder.cpp" />
+    <ClCompile Include="..\CIMMessage.cpp" />
+    <ClCompile Include="..\CIMMethod.cpp" />
+    <ClCompile Include="..\CIMMethodRep.cpp" />
+    <ClCompile Include="..\CIMName.cpp" />
+    <ClCompile Include="..\CIMNameInline.cpp" />
+    <ClCompile Include="..\CIMObject.cpp" />
+    <ClCompile Include="..\CIMObjectPath.cpp" />
+    <ClCompile Include="..\CIMObjectRep.cpp" />
+    <ClCompile Include="..\Cimom.cpp" />
+    <ClCompile Include="..\CimomMessage.cpp" />
+    <ClCompile Include="..\CIMParameter.cpp" />
+    <ClCompile Include="..\CIMParameterRep.cpp" />
+    <ClCompile Include="..\CIMParamValue.cpp" />
+    <ClCompile Include="..\CIMParamValueRep.cpp" />
+    <ClCompile Include="..\CIMProperty.cpp" />
+    <ClCompile Include="..\CIMPropertyList.cpp" />
+    <ClCompile Include="..\CIMPropertyRep.cpp" />
+    <ClCompile Include="..\CIMQualifier.cpp" />
+    <ClCompile Include="..\CIMQualifierDecl.cpp" />
+    <ClCompile Include="..\CIMQualifierDeclRep.cpp" />
+    <ClCompile Include="..\CIMQualifierList.cpp" />
+    <ClCompile Include="..\CIMQualifierNames.cpp" />
+    <ClCompile Include="..\CIMQualifierRep.cpp" />
+    <ClCompile Include="..\CIMResponseData.cpp" />
+    <ClCompile Include="..\CIMScope.cpp" />
+    <ClCompile Include="..\CIMServerDescription.cpp" />
+    <ClCompile Include="..\CIMStatusCode.cpp" />
+    <ClCompile Include="..\CIMType.cpp" />
+    <ClCompile Include="..\CIMValue.cpp" />
+    <ClCompile Include="..\CIMValueInline.cpp" />
+    <ClCompile Include="..\CommonUTF.cpp" />
+    <ClCompile Include="..\Condition.cpp" />
+    <ClCompile Include="..\Config.cpp" />
+    <ClCompile Include="..\Constants.cpp" />
+    <ClCompile Include="..\ContentLanguageList.cpp" />
+    <ClCompile Include="..\DeclContext.cpp" />
+    <ClCompile Include="..\Dir.cpp" />
+    <ClCompile Include="..\DirWindows.cpp" />
+    <ClCompile Include="..\Exception.cpp" />
+    <ClCompile Include="..\Executor.cpp" />
+    <ClCompile Include="..\FileSystem.cpp" />
+    <ClCompile Include="..\Formatter.cpp" />
+    <ClCompile Include="..\HashTable.cpp" />
+    <ClCompile Include="..\HostAddress.cpp" />
+    <ClCompile Include="..\HostLocator.cpp" />
+    <ClCompile Include="..\HTTPAcceptor.cpp" />
+    <ClCompile Include="..\HTTPConnection.cpp" />
+    <ClCompile Include="..\HTTPConnector.cpp" />
+    <ClCompile Include="..\HTTPMessage.cpp" />
+    <ClCompile Include="..\IDFactory.cpp" />
+    <ClCompile Include="..\IndicationRouter.cpp" />
+    <ClCompile Include="..\InternalException.cpp" />
+    <ClCompile Include="..\LanguageParser.cpp" />
+    <ClCompile Include="..\LanguageTag.cpp" />
+    <ClCompile Include="..\List.cpp" />
+    <ClCompile Include="..\Logger.cpp" />
+    <ClCompile Include="..\Magic.cpp" />
+    <ClCompile Include="..\Memory.cpp" />
+    <ClCompile Include="..\Message.cpp" />
+    <ClCompile Include="..\MessageLoader.cpp" />
+    <ClCompile Include="..\MessageQueue.cpp" />
+    <ClCompile Include="..\MessageQueueService.cpp" />
+    <ClCompile Include="..\ModuleController.cpp" />
+    <ClCompile Include="..\Monitor.cpp" />
+    <ClCompile Include="..\Mutex.cpp" />
+    <ClCompile Include="..\ObjectNormalizer.cpp" />
+    <ClCompile Include="..\Once.cpp" />
+    <ClCompile Include="..\OperationContext.cpp" />
+    <ClCompile Include="..\OperationContextInternal.cpp" />
+    <ClCompile Include="..\Pair.cpp" />
+    <ClCompile Include="..\Print.cpp" />
+    <ClCompile Include="..\QueryExpressionRep.cpp" />
+    <ClCompile Include="..\ReadWriteSem.cpp" />
+    <ClCompile Include="..\Resolver.cpp" />
+    <ClCompile Include="..\ResponseHandler.cpp" />
+    <ClCompile Include="..\ResponseHandlerRep.cpp" />
+    <ClCompile Include="..\SCMO.cpp" />
+    <ClCompile Include="..\SCMOClassCache.cpp" />
+    <ClCompile Include="..\SCMOInternalXmlEncoder.cpp" />
+    <ClCompile Include="..\SCMOStreamer.cpp" />
+    <ClCompile Include="..\SCMOXmlWriter.cpp" />
+    <ClCompile Include="..\Semaphore.cpp" />
+    <ClCompile Include="..\Sharable.cpp" />
+    <ClCompile Include="..\Signal.cpp" />
+    <ClCompile Include="..\Socket.cpp" />
+    <ClCompile Include="..\SpinLock.cpp" />
+    <ClCompile Include="..\SSLContext.cpp" />
+    <ClCompile Include="..\Stack.cpp" />
+    <ClCompile Include="..\StatisticalData.cpp" />
+    <ClCompile Include="..\String.cpp" />
+    <ClCompile Include="..\StringConversion.cpp" />
+    <ClCompile Include="..\StringInline.cpp" />
+    <ClCompile Include="..\System.cpp" />
+    <ClCompile Include="..\SystemWindows.cpp" />
+    <ClCompile Include="..\Thread.cpp" />
+    <ClCompile Include="..\ThreadPool.cpp" />
+    <ClCompile Include="..\Threads.cpp" />
+    <ClCompile Include="..\Time.cpp" />
+    <ClCompile Include="..\TimeValue.cpp" />
+    <ClCompile Include="..\TLS.cpp" />
+    <ClCompile Include="..\TraceFileHandler.cpp" />
+    <ClCompile Include="..\TraceFileHandlerWindows.cpp" />
+    <ClCompile Include="..\TraceLogHandler.cpp" />
+    <ClCompile Include="..\TraceMemoryHandler.cpp" />
+    <ClCompile Include="..\Tracer.cpp" />
+    <ClCompile Include="..\TSDKey.cpp" />
+    <ClCompile Include="..\UintArgs.cpp" />
+    <ClCompile Include="..\Union.cpp" />
+    <ClCompile Include="..\XmlGenerator.cpp" />
+    <ClCompile Include="..\XmlParser.cpp" />
+    <ClCompile Include="..\XmlReader.cpp" />
+    <ClCompile Include="..\XmlWriter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\LoadAndClearWord_HPUX_PARISC_ACC.s" />
+    <None Include="..\Makefile" />
+    <None Include="..\PegCommon.dspx" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{540BF09F-4365-4244-AAB0-0A9B4C8EAA13}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>c:\PegasusRun\vs6bin\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>c:\PegasusRun\vs6bin\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(PEGASUS)\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;PEGASUS_MEMORY_DEBUG;PEGASUS_INTERNALONLY;_WIN32_WINNT=0x0400;WIN32;_WINDOWS;_USRDLL;PEGCOMMON_EXPORTS;PEGASUS_PLATFORM_WIN32_IX86_MSVC;PEGASUS_COMMON_INTERNAL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\PegCommon.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>c:\PegasusRun\vs6bin\PegCommon.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>c:\PegasusRun\vs6bin\PegCommon.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>c:\PegasusRun\vs6bin\PegCommon.dll</OutputFile>
+      <ImportLibrary>c:\PegasusRun\vs6bin\PegCommon.lib</ImportLibrary>
+      <AdditionalDependencies>ws2_32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(PEGASUS)\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;PEGASUS_MEMORY_DEBUG;PEGASUS_INTERNALONLY;_WIN32_WINNT=0x0400;WIN32;_WINDOWS;_USRDLL;PEGCOMMON_EXPORTS;PEGASUS_PLATFORM_WIN32_IX86_MSVC;PEGASUS_COMMON_INTERNAL;PEGASUS_USE_EXPERIMENTAL_INTERFACES;PEGASUS_DISABLE_LOCAL_DOMAIN_SOCKET;PEGASUS_INET6_ADDRSTR_LEN=128;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\PegCommon.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>c:\PegasusRun\vs6bin\PegCommon.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>c:\PegasusRun\vs6bin\PegCommon.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>c:\PegasusRun\vs6bin\PegCommon.dll</OutputFile>
+      <ImportLibrary>c:\PegasusRun\vs6bin\PegCommon.lib</ImportLibrary>
+      <AdditionalDependencies>ws2_32.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

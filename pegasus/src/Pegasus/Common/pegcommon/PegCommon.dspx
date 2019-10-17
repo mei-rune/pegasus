@@ -1,0 +1,962 @@
+# Microsoft Developer Studio Project File - Name="PegCommon" - Package Owner=<4>
+# Microsoft Developer Studio Generated Build File, Format Version 6.00
+# ** DO NOT EDIT **
+
+# TARGTYPE "Win32 (x86) Dynamic-Link Library" 0x0102
+
+CFG=PegCommon - Win32 Debug
+!MESSAGE This is not a valid makefile. To build this project using NMAKE,
+!MESSAGE use the Export Makefile command and run
+!MESSAGE 
+!MESSAGE NMAKE /f "PegCommon.mak".
+!MESSAGE 
+!MESSAGE You can specify a configuration when running NMAKE
+!MESSAGE by defining the macro CFG on the command line. For example:
+!MESSAGE 
+!MESSAGE NMAKE /f "PegCommon.mak" CFG="PegCommon - Win32 Debug"
+!MESSAGE 
+!MESSAGE Possible choices for configuration are:
+!MESSAGE 
+!MESSAGE "PegCommon - Win32 Release" (based on "Win32 (x86) Dynamic-Link Library")
+!MESSAGE "PegCommon - Win32 Debug" (based on "Win32 (x86) Dynamic-Link Library")
+!MESSAGE 
+
+# Begin Project
+# PROP AllowPerConfigDependencies 0
+# PROP Scc_ProjName ""
+# PROP Scc_LocalPath ""
+CPP=cl.exe
+MTL=midl.exe
+RSC=rc.exe
+
+!IF  "$(CFG)" == "PegCommon - Win32 Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "Release"
+# PROP BASE Intermediate_Dir "Release"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "c:\PegasusRun\vs6bin"
+# PROP Intermediate_Dir "Release"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+# ADD BASE CPP /nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "PEGCOMMON_EXPORTS" /YX /FD /c
+# ADD CPP /nologo /MD /W3 /GR /GX /ZI /O2 /I "$(PEGASUS)\src" /D "NDEBUG" /D "PEGASUS_MEMORY_DEBUG" /D "PEGASUS_INTERNALONLY" /D _WIN32_WINNT=0x0400 /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "PEGCOMMON_EXPORTS" /D "PEGASUS_PLATFORM_WIN32_IX86_MSVC" /D "PEGASUS_COMMON_INTERNAL" /YX /FD /c
+# SUBTRACT CPP /Fr
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /win32
+# ADD BASE RSC /l 0x409 /d "NDEBUG"
+# ADD RSC /l 0x409 /d "NDEBUG"
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /machine:I386
+# ADD LINK32 ws2_32.lib advapi32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /machine:I386
+
+!ELSEIF  "$(CFG)" == "PegCommon - Win32 Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "Debug"
+# PROP BASE Intermediate_Dir "Debug"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "c:\PegasusRun\vs6bin"
+# PROP Intermediate_Dir "Debug"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+# ADD BASE CPP /nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "PEGCOMMON_EXPORTS" /YX /FD /GZ /c
+# ADD CPP /nologo /MDd /W3 /Gm /GR /GX /ZI /Od /I "$(PEGASUS)\src" /D "_DEBUG" /D "PEGASUS_MEMORY_DEBUG" /D "PEGASUS_INTERNALONLY" /D _WIN32_WINNT=0x0400 /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "PEGCOMMON_EXPORTS" /D "PEGASUS_PLATFORM_WIN32_IX86_MSVC" /D "PEGASUS_COMMON_INTERNAL" /FR /FD /GZ /c
+# SUBTRACT CPP /YX
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /win32
+# ADD BASE RSC /l 0x409 /d "_DEBUG"
+# ADD RSC /l 0x409 /d "_DEBUG"
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /debug /machine:I386 /pdbtype:sept
+# ADD LINK32 ws2_32.lib advapi32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /map /debug /machine:I386 /pdbtype:sept
+
+!ENDIF 
+
+# Begin Target
+
+# Name "PegCommon - Win32 Release"
+# Name "PegCommon - Win32 Debug"
+# Begin Group "Source Files"
+
+# PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
+# Begin Source File
+
+SOURCE=..\Array.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\AsyncOpNode.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\AuthenticationInfoRep.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Base64.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CGIQueryString.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Char16.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMClass.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMClassRep.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMDateTime.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMFlavor.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMIndication.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMInstance.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMInstanceRep.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMMessage.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMMethod.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMMethodRep.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMName.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMObject.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMObjectPath.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMObjectRep.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Cimom.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CimomMessage.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMParameter.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMParameterRep.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMParamValue.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMParamValueRep.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMProperty.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMPropertyList.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMPropertyRep.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMQualifier.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMQualifierDecl.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMQualifierDeclRep.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMQualifierList.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMQualifierNames.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMQualifierRep.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMScope.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMStatusCode.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMType.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMValue.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Config.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeclContext.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Destroyer.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Dir.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\DQueue.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Exception.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\FileSystem.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Formatter.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\HashTable.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\HTTPAcceptor.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\HTTPConnection.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\HTTPConnector.cpp
+
+!IF  "$(CFG)" == "PegCommon - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "PegCommon - Win32 Debug"
+
+# ADD CPP /D _WIN32_WINNT=0x0500
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\HTTPMessage.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Indentor.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\InternalException.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\IPC.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Logger.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Memory.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Message.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\MessageQueue.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\MessageQueueService.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\ModuleController.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\MofWriter.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Monitor.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\OperationContext.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\OptionManager.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pair.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\peg_authorization.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Queue.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Resolver.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\ResponseHandler.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Service.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Sharable.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Socket.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\SSLContext.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Stack.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\StatisticalData.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Stopwatch.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\String.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\System.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Thread.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\TimeValue.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\TLS.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\TraceFileHandler.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Tracer.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\Union.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\XmlParser.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\XmlReader.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=..\XmlWriter.cpp
+# End Source File
+# End Group
+# Begin Group "Header Files"
+
+# PROP Default_Filter "h;hpp;hxx;hm;inl"
+# Begin Source File
+
+SOURCE=..\Array.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\ArrayImpl.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\ArrayInter.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\AsyncOpNode.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\AsyncOpNodeLocal.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\AuthenticationInfo.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\AuthenticationInfoRep.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Base64.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Boolean.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CGIQueryString.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Channel.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Char16.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMClass.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMClassRep.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMDateTime.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMFlavor.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMHandle.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMIndication.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMInstance.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMInstanceRep.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMMessage.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMMethod.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMMethodRep.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMName.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMObject.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMObjectPath.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMObjectRep.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Cimom.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMOMHandle.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CimomMessage.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMOMPort.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMOperations.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMParameter.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMParameterRep.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMParamValue.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMParamValueRep.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMPredicate.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMProperty.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\CIMPropertyList.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMPropertyRep.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMQualifier.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMQualifierDecl.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMQualifierDeclRep.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMQualifierList.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMQualifierNames.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMQualifierRep.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMScope.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMStatusCode.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMType.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CIMValue.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Config.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\CRTDBGx.H
+# End Source File
+# Begin Source File
+
+SOURCE=..\debugnew.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\DeclContext.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Destroyer.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Dir.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\DQueue.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Exception.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\FileSystem.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Formatter.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\HashTable.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\HTTPAcceptor.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\HTTPConnection.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\HTTPConnector.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\HTTPListener.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\HTTPMessage.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\HTTPOptions.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Indentor.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\internal_dq.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\InternalException.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\IPC.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\IPCHpux.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\IPCWindows.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\IPCWindows_inline.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Logger.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Memory.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Message.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\MessageQueue.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\MessageQueueService.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\ModuleController.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\MofWriter.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Monitor.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\MT_MessageQueue.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\OperationContext.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\OptionManager.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Pair.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\peg_authorization.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\PegasusVersion.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Platform_AIX_RS_IBMCXX.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Platform_HPUX_PARISC_ACC.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Platform_LINUX_IX86_GNU.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Platform_SOLARIS_SPARC_GNU.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Platform_TRU64_ALPHA_DECCXX.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Platform_WIN32_IX86_MSVC.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Platform_ZOS_ZSERIES_IBM.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Queue.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Resolver.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\ResponseHandler.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Selector.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Service.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Sharable.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Signal.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Socket.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\SSLContext.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\SSLContextRep.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Stack.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\StatisticalData.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Stopwatch.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\String.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\System.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\TCPChannel.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Thread.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\ThreadUnix_inline.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\ThreadWindows_inline.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\TimeValue.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\TLS.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\TraceComponents.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\TraceFileHandler.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Tracer.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Union.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\XmlConstants.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\XmlParser.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\XmlReader.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\XmlWriter.h
+# End Source File
+# End Group
+# Begin Group "Resource Files"
+
+# PROP Default_Filter "ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
+# End Group
+# End Target
+# End Project

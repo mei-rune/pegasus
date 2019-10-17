@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2a8c30f8-2b9f-4569-873e-2f02959f4e8d}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{23f3e39d-73d0-490b-9257-f587b2872a57}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{fe0d6bed-773f-4cc4-9720-9beeea040d67}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\cimserver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="leaks.txt" />
+    <Text Include="LeaksonExit.txt" />
+    <Text Include="LeaksonExitClient.txt" />
+    <Text Include="LeaksonReturn.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="LeaksOnExitClient.asp" />
+  </ItemGroup>
+</Project>

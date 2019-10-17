@@ -1,0 +1,2243 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "CGIClient"=.\SRC\CLIENTS\CGICLIENT\CGIClient\CGIClient.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CIMAuth"=.\SRC\CLIENTS\CIMAUTH\CIMAuth\CIMAuth.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegCLIutils
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegGetOopt
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CIMConfig"=.\SRC\CLIENTS\CIMCONFIG\CIMConfig\CIMConfig.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegCLIutils
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegGetOopt
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegConfig
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CIMProvider"=.\CIMProvider\CIMProvider.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegCLIutils
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegGetOopt
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CIMUser"=.\SRC\CLIENTS\CIMUSER\CIMUser\CIMUser.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegCLIutils
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegGetOopt
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CIMop"=.\SRC\CLIENTS\CIMOP\CIMop.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CLITestCLients"=.\SRC\CLIENTS\CLITestCLients\CLITestCLients.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegPRM
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name CLI_ClientLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CLI_ClientLib"=.\SRC\CLIENTS\LIB\CLI_ClientLib\CLI_ClientLib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CLI_CreateInstance"=.\SRC\CLIENTS\CLITESTCLIENTS\CREATEINSTANCE\CLI_CreateInstance\CLI_CreateInstance.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CLI_DeleteInstance"=.\SRC\CLIENTS\CLITESTCLIENTS\DELETEINSTANCE\CLI_DeleteInstance\CLI_DeleteInstance.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CLI_EnumerateInstanceNames"=.\SRC\CLIENTS\CLITESTCLIENTS\ENUMERATEINSTANCENAMES\CLI_EnumerateInstanceNames\CLI_EnumerateInstanceNames.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name CLI_ClientLib
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CLI_EnumerateInstances"=.\SRC\CLIENTS\CLITESTCLIENTS\ENUMERATEINSTANCES\CLI_EnumerateInstances\CLI_EnumerateInstances.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CLI_GetClass"=.\SRC\CLIENTS\CLITESTCLIENTS\GETCLASS\CLI_GetClass\CLI_GetClass.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CLI_GetInstance"=.\SRC\CLIENTS\CLITESTCLIENTS\GETINSTANCE\CLI_GetInstance\CLI_GetInstance.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CimMof"=.\src\Pegasus\Compiler\cmdline\CimMof.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegCompiler
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegRepository
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegGetOopt
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CimMofl"=.\SRC\PEGASUS\COMPILER\CMDLINE\CimMofl\CimMofl.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegCompiler
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegGetOopt
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegRepository
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CimServer"=.\SRC\SERVER\CimServer\CimServer.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegRepository
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegServer
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegProvider
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Slp
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegIndicationService
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegAuthentication
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegPRM
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegConfig
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegWQL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ComputerSystemProvider"=.\SRC\PROVIDERS\MANAGEDSYSTEM\COMPUTERSYSTEM\ComputerSystemProvider\ComputerSystemProvider.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegProvider
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ConfigSettingProvider"=.\SRC\PEGASUS\CONTROLPROVIDERS\CONFIGSETTINGPROVIDER\ConfigSettingProvider\ConfigSettingProvider.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegProvider
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegConfig
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "IBM_CIMOMStatDataProvider"=.\SRC\PROVIDERS\STATISTIC\IBM_CIMOMStatDataProvider\IBM_CIMOMStatDataProvider.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegProvider
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegRepository
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "NameSpaceProvider"=.\SRC\PEGASUS\CONTROLPROVIDERS\NAMESPACEPROVIDER\NameSpaceProvider\NameSpaceProvider.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegProvider
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "OSProvider"=.\SRC\PROVIDERS\MANAGEDSYSTEM\OPERATINGSYSTEM\OSProvider\OSProvider.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegProvider
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PegAuthentication"=.\SRC\PEGASUS\SECURITY\AUTHENTICATION\PegAuthentication\PegAuthentication.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegUserManager
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegConfig
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PegCLIutils"=.\src\Clients\cliutils\pegcliutils\PegCLIutils.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PegClient"=.\SRC\PEGASUS\CLIENT\PegClient\PegClient.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegRepository
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PegCommon"=.\SRC\PEGASUS\COMMON\PegCommon\PegCommon.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "PegCompiler"=.\src\Pegasus\Compiler\PegCompiler.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegRepository
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PegConfig"=.\SRC\PEGASUS\CONFIG\PegConfig\PegConfig.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PegExportServer"=.\SRC\PEGASUS\EXPORTSERVER\PegExportServer\PegExportServer.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegProvider
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegConfig
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PegGetOopt"=.\SRC\PEGASUS\GETOOPT\PegGetOopt\PegGetOopt.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PegHandlerService"=.\SRC\PEGASUS\HANDLERSERVICE\PegHandlerService\PegHandlerService.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PegIndicationService"=.\SRC\PEGASUS\INDICATIONSERVICE\PegIndicationService\PegIndicationService.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegProvider
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegRepository
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegWQL
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegProviderManager
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegPRM
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegConfig
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PegPRM"=.\SRC\PEGASUS\SERVER\PROVIDERREGISTRATIONMANAGER\PegPRM\PegPRM.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegProvider
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegRepository
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PegProvider"=.\SRC\PEGASUS\PROVIDER\PegProvider\PegProvider.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PegProviderManager"=.\SRC\PEGASUS\PROVIDERMANAGER\PegProviderManager\PegProviderManager.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegProvider
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegPRM
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PegRepository"=.\SRC\PEGASUS\REPOSITORY\PegRepository\PegRepository.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegConfig
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PegServer"=.\SRC\PEGASUS\SERVER\PegServer\PegServer.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegRepository
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegProvider
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegExportServer
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegUserManager
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegWQL
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegProviderManager
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegHandlerService
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegIndicationService
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegPRM
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ProviderRegistrationProvider
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ConfigSettingProvider
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name UserAuthProvider
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegAuthentication
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ComputerSystemProvider
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name OSProvider
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name NameSpaceProvider
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegConfig
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PegUserManager"=.\SRC\PEGASUS\SECURITY\USERMANAGER\PegUserManager\PegUserManager.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegConfig
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "PegWQL"=.\SRC\PEGASUS\WQL\PegWQL\PegWQL.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ProcessProvider"=.\SRC\PROVIDERS\MANAGEDSYSTEM\PROCESS\ProcessProvider\ProcessProvider.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegProvider
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ProviderRegistrationProvider"=.\SRC\PEGASUS\CONTROLPROVIDERS\PROVIDERREGISTRATIONPROVIDER\ProviderRegistrationProvider\ProviderRegistrationProvider.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegPRM
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegProvider
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "RT_IndicationConsumer"=.\src\Providers\sample\RT_Indication\RT_IndicationConsumer\RT_IndicationConsumer.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name CIMProvider
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegProvider
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "RT_IndicationProvider"=.\SRC\PROVIDERS\SAMPLE\RT_INDICATION\RT_IndicationProvider\RT_IndicationProvider.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name CIMProvider
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegProvider
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Slp"=.\SRC\SLP\Slp\Slp.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestAbstract"=.\src\Pegasus\Common\tests\Abstract\TestAbstract.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestArray"=.\SRC\PEGASUS\COMMON\TESTS\ARRAY\TestArray.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestAssoc"=.\src\pegasus\common\tests\Assoc\TestAssoc.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "TestCGIQueryString"=.\SRC\PEGASUS\COMMON\TESTS\CGIQUERYSTRING\TestCGIQueryString.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestClassDecl"=.\SRC\PEGASUS\COMMON\TESTS\ClassDecl\TestClassDecl.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestClient"=.\SRC\CLIENTS\TestClient\TestClient.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Slp
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestClient2"=.\SRC\PEGASUS\CLIENT\TESTS\CLIENT\TestClient2\TestClient2.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestClientEnumInstNames"=.\SRC\PEGASUS\CLIENT\TESTS\ENUMINSTNAMES\TestClientEnumInstNames\TestClientEnumInstNames.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestClientGetInstance"=.\SRC\PEGASUS\CLIENT\TESTS\GETINSTANCE\TestClientGetInstance\TestClientGetInstance.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestClientInvokeMethod"=.\SRC\PEGASUS\CLIENT\TESTS\INVOKEMETHOD\TestClientInvokeMethod\TestClientInvokeMethod.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegRepository
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestConfig"=.\SRC\PEGASUS\COMMON\TESTS\Config\TestConfig.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestCreateInstances"=.\SRC\PEGASUS\SERVER\PROVIDERREGISTRATIONMANAGER\TESTS\CREATEINSTANCES\TestCreateInstances\TestCreateInstances.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegServer
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegRepository
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegPRM
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestDQueue"=.\SRC\PEGASUS\COMMON\TESTS\DQUEUE\TestDQueue\TestDQueue.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestDateTime"=.\src\Pegasus\Common\tests\DateTime\TestDateTime.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestDefaultInstanceProvider"=.\SRC\PROVIDERS\TESTPROVIDERS\DEFAULTINSTANCEPROVIDER\TestDefaultInstanceProvider.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "TestDeleteInstances"=.\SRC\PEGASUS\SERVER\PROVIDERREGISTRATIONMANAGER\TESTS\DELETEINSTANCES\TestDeleteInstances\TestDeleteInstances.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegRepository
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegServer
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegPRM
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestDir"=.\SRC\PEGASUS\COMMON\TESTS\DIR\TestDir.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestDynLoad"=.\SRC\PEGASUS\COMMON\TESTS\DYNLOAD\TestDynLoad.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestEnumInstNames"=.\SRC\CLIENTS\CLITESTCLIENTS\ENUMINSTNAMES\TestEnumInstNames\TestEnumInstNames.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegPRM
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestEnumInstNames0"=.\SRC\PEGASUS\CLIENT\TESTS\ENUMINSTNAMES\TestEnumInstNames0\TestEnumInstNames0.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestFileSystem"=.\SRC\PEGASUS\COMMON\TESTS\FILESYSTEM\TestFileSystem.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestFormatter"=.\SRC\PEGASUS\COMMON\TESTS\FORMATTER\TestFormatter.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestGetClass"=.\SRC\CLIENTS\CLITESTCLIENTS\GETCLASS\TestGetClass\TestGetClass.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "TestHandlerTable"=.\SRC\PEGASUS\HANDLERSERVICE\TESTS\HANDLERTABLE\TestHandlerTable\TestHandlerTable.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "TestHashTable"=.\SRC\PEGASUS\COMMON\TESTS\HASHTABLE\TestHashTable.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestHttpListener"=.\SRC\PEGASUS\COMMON\TESTS\HTTPLISTENER\TestHttpListener.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestIPC"=.\SRC\PEGASUS\COMMON\TESTS\IPC\TestIPC.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestInstanceDecl"=.\SRC\PEGASUS\COMMON\TESTS\INSTANCEDECL\TestInstanceDecl.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestLogger"=.\SRC\PEGASUS\COMMON\TESTS\LOGGER\TestLogger.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestLookupIndicationProvider"=.\SRC\PEGASUS\SERVER\PROVIDERREGISTRATIONMANAGER\TESTS\LOOKUPINDICATIONPROVIDER\TestLookupIndicationProvider\TestLookupIndicationProvider.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegRepository
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegServer
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestLookupInstanceProvider"=.\SRC\PEGASUS\SERVER\PROVIDERREGISTRATIONMANAGER\TESTS\LOOKUPINSTANCEPROVIDER\TestLookupInstanceProvider\TestLookupInstanceProvider.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegRepository
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegServer
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegPRM
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegProviderManager
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestMatch"=.\SRC\PEGASUS\COMMON\TESTS\MATCH\TestMatch.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestMessageQueue"=.\SRC\PEGASUS\COMMON\TESTS\MESSAGEQUEUE\TestMessageQueue.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestMethod"=.\SRC\PEGASUS\COMMON\TESTS\METHOD\TestMethod.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestObject"=.\src\Pegasus\Common\tests\Object\TestObject.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestOptionManager"=.\SRC\PEGASUS\COMMON\TESTS\OPTIONMANAGER\TestOptionManager.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestParamValue"=.\SRC\PEGASUS\COMMON\TESTS\PARAMVALUE\TestParamValue.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestParameter"=.\SRC\PEGASUS\COMMON\TESTS\PARAMETER\TestParameter.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestParser"=.\SRC\PEGASUS\WQL\TESTS\PARSER\TestParser\TestParser.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegWQL
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestParserCLI"=.\SRC\PEGASUS\WQL\TESTS\PARSERCLI\TestParserCLI\TestParserCLI.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "TestProperty"=.\SRC\PEGASUS\COMMON\TESTS\PROPERTY\TestProperty.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestQualifier"=.\SRC\PEGASUS\COMMON\TESTS\QUALIFIER\TestQualifier.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestQualifierDecl"=.\SRC\PEGASUS\COMMON\TESTS\QUALIFIERDECL\TestQualifierDecl.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestQualifierList"=.\SRC\PEGASUS\COMMON\TESTS\QUALIFIERLIST\TestQualifierList.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestQueue"=.\SRC\PEGASUS\COMMON\TESTS\QUEUE\TestQueue.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestReference"=.\SRC\PEGASUS\COMMON\TESTS\REFERENCE\TestReference.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestRepository"=.\SRC\PEGASUS\REPOSITORY\TESTS\REPOSITORY\TestRepository\TestRepository.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "TestRepository2"=.\SRC\PEGASUS\REPOSITORY\TESTS\REPOSITORY2\TestRepository2\TestRepository2.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "TestRepositoryClassDeclRep"=.\SRC\PEGASUS\REPOSITORY\TESTS\CLASSDECLREP\TestRepositoryClassDeclRep\TestRepositoryClassDeclRep.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "TestRepositoryEnumerateClassNames"=.\SRC\PEGASUS\REPOSITORY\TESTS\ENUMERATECLASSNAMES\TestRepositoryEnumerateClassNames\TestRepositoryEnumerateClassNames.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "TestRepositoryInheritanceTree"=.\SRC\PEGASUS\REPOSITORY\TESTS\INHERITANCETREE\TestRepositoryInheritanceTree\TestRepositoryInheritanceTree.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "TestRepositoryInst"=.\SRC\PEGASUS\REPOSITORY\TESTS\INST\TestRepositoryInst\TestRepositoryInst.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "TestRepositoryLoad Repository"=".\SRC\PEGASUS\REPOSITORY\TESTS\LOADREPOSITORY\TestRepositoryLoad Repository\TestRepositoryLoad Repository.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "TestRepositoryLoadClass"=.\SRC\PEGASUS\REPOSITORY\TESTS\LOADCLASS\TestRepositoryLoadClass\TestRepositoryLoadClass.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "TestRepositoryNameSpace"=.\SR\PEGASUS\REPOSITORY\TESTS\NAMESPACE\TestRepositoryNameSpace\TestRepositoryNameSpace.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "TestRepositoryNameSpaceManager"=.\SRC\PEGASUS\REPOSITORY\TESTS\NAMESPACEMANAGER\TestRepositoryNameSpaceManager\TestRepositoryNameSpaceManager.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "TestRepositoryProvider"=.\SRC\PEGASUS\PROVIDER\TestRepositoryProvider\TestRepositoryProvider.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "TestRepositoryProvider2"=.\SRC\PEGASUS\PROVIDER2\TestRepositoryProvider2\TestRepositoryProvider2.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "TestRepositoryQualiferDeclRep"=.\SRC\PEGASUS\REPOSITORY\TESTS\QUALIFIERDECLREP\TestRepositoryQualiferDeclRep\TestRepositoryQualiferDeclRep.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "TestRepositoryTestClasses"=.\SRC\PEGASUS\REPOSITORY\TESTS\TESTCLASSES\TestRepositoryTestClasses\TestRepositoryTestClasses.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "TestResolve"=.\SRC\PEGASUS\COMMON\TESTS\RESOLVE\TestResolve.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestServiceBeeper"=.\SRC\PEGASUS\COMMON\TESTS\SERVICE\BEEPERSERVICE\TestServiceBeeper.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestServiceInstall"=.\SRC\PEGASUS\COMMON\TESTS\SERVICE\INSTALLSERVICE\TestServiceInstall.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestServiceRemove"=.\SRC\PEGASUS\COMMON\TESTS\SERVICE\REMOVESERVICE\TestServiceRemove.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestStack"=.\SRC\PEGASUS\COMMON\TESTS\STACK\TestStack.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestStopWatch"=.\src\Pegasus\Common\tests\Stopwatch\TestStopWatch.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestStrToInstName"=.\SRC\PEGASUS\COMMON\TESTS\STRTOINSTNAME\TestStrToInstName.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestString"=.\SRC\PEGASUS\COMMON\TESTS\STRING\TestString.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestThread"=.\SRC\PEGASUS\COMMON\TESTS\THREAD\TestThread.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestThreadPool"=.\SRC\PEGASUS\COMMON\TESTS\THREADPOOL\TestThreadPool\TestThreadPool.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestTimeValue"=.\src\Pegasus\Common\tests\TimeValue\TestTimeValue.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestTracer"=.\SRC\PEGASUS\COMMON\TESTS\TRACER\TestTracer.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestValidateClass"=.\SRC\PEGASUS\COMMON\TESTS\VALIDATECLASS\TestValidateClass.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestValue"=.\src\Pegasus\Common\tests\Value\TestValue.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestWebClient"=.\SRC\PEGASUS\COMMON\TESTS\WEBCLIENT\TestWebClient.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name TestWebServer
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestWebServer"=.\src\Pegasus\Common\tests\WebServer\TestWebServer.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestXMLDump"=.\SRC\PEGASUS\COMMON\TESTS\XMLDUMP\TestXMLDump.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestXMLParser"=.\SRC\PEGASUS\COMMON\TESTS\XMLPARSER\TestXMLParser.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TestXMLPrint"=.\SRC\PEGASUS\COMMON\TESTS\XMLPRINT\TestXMLPrint.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Test_WBEMExec"=.\SRC\CLIENTS\WBEMEXEC\Test_WBEMExec\Test_WBEMExec.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegGetOopt
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegCLIutils
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ToMof"=.\SRC\CLIENTS\TOMOF\ToMof\ToMof.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegServer
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegRepository
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegClient
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegProvider
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ProviderRegistrationProvider
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegProviderManager
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "UserAuthProvider"=.\SRC\PEGASUS\CONTROLPROVIDERS\USERAUTHPROVIDER\UserAuthProvider\UserAuthProvider.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name PegCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegProvider
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PegUserManager
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "pegasus"=.\pegasus.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+
