@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LocalDebuggerCommandArguments>-RD:\developing\pegasus\debug -Nrepository -aE -ID:\ahdd\storage_data\ds8000_mof\CIMPrelim210 -ID:\ahdd\storage_data\ds8000_mof\CIMPrelim210\Application -ID:\ahdd\storage_data\ds8000_mof\CIMPrelim210\Core -ID:\ahdd\storage_data\ds8000_mof\CIMPrelim210\Database -ID:\ahdd\storage_data\ds8000_mof\CIMPrelim210\Device -ID:\ahdd\storage_data\ds8000_mof\CIMPrelim210\Event -ID:\ahdd\storage_data\ds8000_mof\CIMPrelim210\Interop -ID:\ahdd\storage_data\ds8000_mof\CIMPrelim210\IPsecPolicy -ID:\ahdd\storage_data\ds8000_mof\CIMPrelim210\Metrics -ID:\ahdd\storage_data\ds8000_mof\CIMPrelim210\Network -ID:\ahdd\storage_data\ds8000_mof\CIMPrelim210\Physical -ID:\ahdd\storage_data\ds8000_mof\CIMPrelim210\Policy -ID:\ahdd\storage_data\ds8000_mof\CIMPrelim210\Security -ID:\ahdd\storage_data\ds8000_mof\CIMPrelim210\Support -ID:\ahdd\storage_data\ds8000_mof\CIMPrelim210\System -ID:\ahdd\storage_data\ds8000_mof\CIMPrelim210\User -n root/ibm  D:\ahdd\storage_data\ds8000_mof\IBMTSDS.mof</LocalDebuggerCommandArguments>
-    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerCommand>D:\developing\pegasus\debug\bin\cimmofl.exe</LocalDebuggerCommand>
-  </PropertyGroup>
-</Project>
