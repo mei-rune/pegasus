@@ -181,7 +181,8 @@ Boolean ProcessCimElement(CIMRepository& repository, XmlParser& parser)
 
     if (!parser.next(entry) || entry.type != XmlEntry::XML_DECLARATION)
     {
-        throw(parser.getLine(), "expected XML declaration");
+		throw XmlValidationError(parser.getLine(),
+			"Expected XML declaration");
     }
 
     if (!XmlReader::testStartTag(parser, entry, "CIM"))
