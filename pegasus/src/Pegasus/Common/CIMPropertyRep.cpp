@@ -141,26 +141,26 @@ void CIMPropertyRep::resolve(
 
     // Check the type:
 
-    if (!inheritedProperty.getValue().typeCompatible(_value))
-    {
-        if (!(
-            (inheritedProperty.getValue().getType() == CIMTYPE_OBJECT) &&
-            (_value.getType() == CIMTYPE_STRING) &&
-            (_qualifiers.find(PEGASUS_QUALIFIERNAME_EMBEDDEDOBJECT)
-                 != PEG_NOT_FOUND) &&
-            (inheritedProperty.getValue().isArray() == _value.isArray())
-            ) &&
-            !(
-            (inheritedProperty.getValue().getType() == CIMTYPE_INSTANCE) &&
-            (_value.getType() == CIMTYPE_STRING) &&
-            (_qualifiers.find(PEGASUS_QUALIFIERNAME_EMBEDDEDINSTANCE)
-                 != PEG_NOT_FOUND) &&
-            (inheritedProperty.getValue().isArray() == _value.isArray())
-            ))
-        {
-            throw TypeMismatchException();
-        }
-    }
+    //if (!inheritedProperty.getValue().typeCompatible(_value))
+    //{
+    //    if (!(
+    //        (inheritedProperty.getValue().getType() == CIMTYPE_OBJECT) &&
+    //        (_value.getType() == CIMTYPE_STRING) &&
+    //        (_qualifiers.find(PEGASUS_QUALIFIERNAME_EMBEDDEDOBJECT)
+    //             != PEG_NOT_FOUND) &&
+    //        (inheritedProperty.getValue().isArray() == _value.isArray())
+    //        ) &&
+    //        !(
+    //        (inheritedProperty.getValue().getType() == CIMTYPE_INSTANCE) &&
+    //        (_value.getType() == CIMTYPE_STRING) &&
+    //        (_qualifiers.find(PEGASUS_QUALIFIERNAME_EMBEDDEDINSTANCE)
+    //             != PEG_NOT_FOUND) &&
+    //        (inheritedProperty.getValue().isArray() == _value.isArray())
+    //        ))
+    //    {
+    //        throw TypeMismatchException();
+    //    }
+    //}
 
     // Validate the qualifiers of the property (according to
     // superClass's property with the same name). This method
@@ -262,10 +262,10 @@ void CIMPropertyRep::resolve(
                 }
             }
 
-            if (!found)
-            {
-                throw TypeMismatchException();
-            }
+            //if (!found)
+            //{
+            //    throw TypeMismatchException(classNames[i].getString());
+            //}
 
             successTree.appendArray(traversalHistory);
         }

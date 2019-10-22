@@ -42,6 +42,103 @@ PEGASUS_USING_STD;
 String namespaceName;
 static Boolean verbose = false;
 
+
+
+Boolean ProcessClaseOrInstanceElement(CIMRepository& repository, XmlParser& parser)
+{
+	CIMClass cimClass, tmpClass;
+	CIMQualifierDecl qualifierDecl;
+	CIMInstance instance;
+
+	if (XmlReader::getClassElement(parser, cimClass))
+	{
+		if (verbose)
+		{
+			cout << "Creating: class ";
+			cout << cimClass.getClassName().getString() << endl;
+		}
+
+		try
+		{
+			repository.createClass(namespaceName, cimClass);
+		}
+		catch (CIMException &e)
+		{
+			if (e.getCode() != CIM_ERR_ALREADY_EXISTS)
+			{
+				throw;
+			}
+		}
+		catch (Exception &e)
+		{
+			// Ignore if cimClass already exists
+			if (e.getMessage() != cimClass.getClassName())
+			{
+				throw;
+			}
+		}
+	}
+	else if (XmlReader::getQualifierDeclElement(parser, qualifierDecl))
+	{
+		if (verbose)
+		{
+			cout << "Creating: qualifier ";
+			cout << qualifierDecl.getName().getString() << endl;
+		}
+
+		try
+		{
+			repository.setQualifier(namespaceName, qualifierDecl);
+		}
+		catch (CIMException &e)
+		{
+			if (e.getCode() != CIM_ERR_ALREADY_EXISTS  && 
+				e.getMessage() != qualifierDecl.getName())
+			{
+				throw;
+			}
+		}
+		catch (Exception &e)
+		{
+			// Ignore if qualifierDecl already exists
+			if (e.getMessage() != qualifierDecl.getName())
+			{
+				throw;
+			}
+		}
+	}
+	else if (XmlReader::getInstanceElement(parser, instance))
+	{
+		if (verbose)
+		{
+			cout << "Creating: instance ";
+			cout << instance.getPath().toString() << endl;
+		}
+
+		try
+		{
+			repository.createInstance(namespaceName, instance);
+		}
+		catch (CIMException &e)
+		{
+			if (e.getCode() != CIM_ERR_ALREADY_EXISTS)
+			{
+				throw;
+			}
+		}
+		catch (Exception &e)
+		{
+			// Ignore if qualifierDecl already exists
+			if (e.getMessage() != instance.getPath())
+			{
+				throw;
+			}
+		}
+	}
+
+	return true;
+}
+
 //------------------------------------------------------------------------------
 // ProcessValueObjectElement()
 //
@@ -53,61 +150,15 @@ static Boolean verbose = false;
 
 Boolean ProcessValueObjectElement(CIMRepository& repository, XmlParser& parser)
 {
-    XmlEntry entry;
+	XmlEntry entry;
 
-    if (!XmlReader::testStartTag(parser, entry, "VALUE.OBJECT"))
-    {
-        return false;
-    }
-
-    CIMClass cimClass, tmpClass;
-    CIMQualifierDecl qualifierDecl;
-
-    if (XmlReader::getClassElement(parser, cimClass))
-    {
-        if (verbose)
-        {
-            cout << "Creating: class ";
-            cout << cimClass.getClassName().getString() << endl;
-        }
-
-        try
-        {
-            repository.createClass(namespaceName, cimClass);
-        }
-        catch (Exception &e)
-        {
-            // Ignore if cimClass already exists
-            if (e.getMessage() != cimClass.getClassName())
-            {
-                throw;
-            }
-        }
-    }
-    else if (XmlReader::getQualifierDeclElement(parser, qualifierDecl))
-    {
-        if (verbose)
-        {
-            cout << "Creating: qualifier ";
-            cout << qualifierDecl.getName().getString() << endl;
-        }
-
-        try
-        {
-            repository.setQualifier(namespaceName, qualifierDecl);
-        }
-        catch (Exception &e)
-        {
-            // Ignore if qualifierDecl already exists
-            if (e.getMessage() != qualifierDecl.getName())
-            {
-                throw;
-            }
-        }
-    }
-    XmlReader::expectEndTag(parser, "VALUE.OBJECT");
-
-    return true;
+	if (!XmlReader::testStartTag(parser, entry, "VALUE.OBJECT"))
+	{
+		return false;
+	}
+	Boolean ret = ProcessClaseOrInstanceElement(repository, parser);
+	XmlReader::expectEndTag(parser, "VALUE.OBJECT");
+	return ret;
 }
 
 //------------------------------------------------------------------------------
@@ -181,39 +232,40 @@ Boolean ProcessCimElement(CIMRepository& repository, XmlParser& parser)
 
     if (!parser.next(entry) || entry.type != XmlEntry::XML_DECLARATION)
     {
-		throw XmlValidationError(parser.getLine(),
-			"Expected XML declaration");
+		// throw XmlValidationError(parser.getLine(),
+		//	"Expected XML declaration");
+		parser.putBack(entry);
     }
 
-    if (!XmlReader::testStartTag(parser, entry, "CIM"))
+    if (XmlReader::testStartTag(parser, entry, "CIM"))
     {
-        return false;
+		String cimVersion;
+
+		if (!entry.getAttributeValue("CIMVERSION", cimVersion))
+		{
+			throw XmlValidationError(parser.getLine(),
+				"missing CIM.CIMVERSION attribute");
+		}
+
+		String dtdVersion;
+
+		if (!entry.getAttributeValue("DTDVERSION", dtdVersion))
+		{
+			throw XmlValidationError(parser.getLine(),
+				"missing CIM.DTDVERSION attribute");
+		}
+
+		if (!ProcessDeclarationElement(repository, parser))
+		{
+			throw XmlValidationError(parser.getLine(),
+				"Expected DECLARATION element");
+		}
+
+		XmlReader::expectEndTag(parser, "CIM");
+		return true;
     }
-    String cimVersion;
 
-    if (!entry.getAttributeValue("CIMVERSION", cimVersion))
-    {
-        throw XmlValidationError(parser.getLine(),
-            "missing CIM.CIMVERSION attribute");
-    }
-
-    String dtdVersion;
-
-    if (!entry.getAttributeValue("DTDVERSION", dtdVersion))
-    {
-        throw XmlValidationError(parser.getLine(),
-            "missing CIM.DTDVERSION attribute");
-    }
-
-    if (!ProcessDeclarationElement(repository, parser))
-    {
-        throw XmlValidationError(parser.getLine(),
-            "Expected DECLARATION element");
-    }
-
-    XmlReader::expectEndTag(parser, "CIM");
-
-    return true;
+	return ProcessClaseOrInstanceElement(repository, parser);
 }
 
 //------------------------------------------------------------------------------
@@ -222,7 +274,7 @@ Boolean ProcessCimElement(CIMRepository& repository, XmlParser& parser)
 //
 //------------------------------------------------------------------------------
 
-static void _processFile(const char* repositoryRoot, const char* xmlFileName)
+static void _processFile(CIMRepository &repository, const char* xmlFileName)
 {
     // Create the parser:
 
@@ -231,25 +283,12 @@ static void _processFile(const char* repositoryRoot, const char* xmlFileName)
     FileSystem::loadFileToMemory(text, xmlFileName);
     XmlParser parser((char*)text.getData());
 
-    CIMRepository repository(repositoryRoot);
-    try
-    {
-        repository.createNameSpace(namespaceName);
-    }
-    catch (Exception &e)
-    {
-        // Ignore if Namespace already exists
-        if (e.getMessage () != namespaceName)
-        {
-            throw;
-        }
-    }
 
-    if (!ProcessCimElement(repository, parser))
-    {
-        cerr << "CIM root element missing" << endl;
-        exit(1);
-    }
+	if (!ProcessCimElement(repository, parser))
+	{
+		cerr << "CIM root element missing" << endl;
+		exit(1);
+	}
 }
 
 //------------------------------------------------------------------------------
@@ -269,15 +308,82 @@ int main(int argc, char** argv)
 
     verbose = getenv("PEGASUS_TEST_VERBOSE") ? true : false;
 
+
+
     try
     {
+		String repositoryRoot = argv[1];
         namespaceName = argv[3];
-        cout << argv[0] << " loading " << argv[2] << " to namespace "
-            << namespaceName << " into repository " << argv[1] << endl;
-        _processFile(argv[1], argv[2]);
+
+		CIMRepository repository(repositoryRoot);
+		try
+		{
+			repository.createNameSpace(namespaceName);
+		}
+		catch (Exception &e)
+		{
+			// Ignore if Namespace already exists
+			if (e.getMessage() != namespaceName)
+			{
+				throw;
+			}
+		}
+
+
+		cout << argv[0] << " loading " << argv[2] << " to namespace "
+			<< namespaceName << " into repository " << argv[1] << endl;
+
+		if (FileSystem::isDirectory(argv[2])) {
+			Array<String> filenames;
+			if (!FileSystem::glob(argv[2], "*.xml", filenames)) {
+				cout << " read directory fail: " << argv[1] << endl;
+				return 1;
+			}
+
+
+			for (; filenames.size() > 0;)
+			{
+				Array<String> remain;
+
+				for (int i = 0; i < filenames.size(); i++)
+				{
+					try
+					{
+						_processFile(repository, filenames[i].getCString());
+						cout << filenames[i] << " loaded." << endl;
+					}
+					catch (const Exception& e)
+					{
+						remain.append(filenames[i]);
+					}
+				}
+
+				if (filenames.size() == remain.size()) {
+					for (int i = 0; i < filenames.size(); i++)
+					{
+						try
+						{
+							_processFile(repository, filenames[i].getCString());
+							cout << filenames[i] << " loaded." << endl;
+						}
+						catch (const Exception& e)
+						{
+							cerr << filenames[i] << ": " << e.getMessage() << endl;
+						}
+					}
+					return 1;
+				}
+				filenames.clear();
+				filenames.appendArray(remain);
+			}
+
+			return 0;
+		}
+
+
+        _processFile(repository, argv[2]);
         cout << argv[0] << " loaded." << endl;
     }
-
     catch (const Exception& e)
     {
         cerr << e.getMessage() << endl;

@@ -166,11 +166,11 @@ void CIMQualifierList::resolve(
         // 2. Check the type and isArray.  Must be the same:
         //----------------------------------------------------------------------
 
-        if (!(q.getType() == qd.getType() && q.isArray() == qd.isArray()))
-        {
-            PEG_METHOD_EXIT();
-            throw BadQualifierType(q.getName().getString ());
-        }
+        //if (!(q.getType() == qd.getType() && q.isArray() == qd.isArray()))
+        //{
+        //    PEG_METHOD_EXIT();
+        //    throw BadQualifierType(q.getName().getString ());
+        //}
 
         //----------------------------------------------------------------------
         // 3. If the qualifier is the EmbeddedInstance qualifier, then check
@@ -198,12 +198,12 @@ void CIMQualifierList::resolve(
         // a valid scope (such as Scope::ASSOCIATION) which is not Scope::CLASS
         // ks Mar 2002. Reinstalled 23 March 2002 to test.
 
-        if (!(qd.getScope().hasScope (scope)))
-        {
-            PEG_METHOD_EXIT();
-            throw BadQualifierScope
-                (qd.getName().getString (), scope.toString ());
-        }
+        //if (!(qd.getScope().hasScope (scope)))
+        //{
+        //    PEG_METHOD_EXIT();
+        //    throw BadQualifierScope
+        //        (qd.getName().getString (), scope.toString ());
+        //}
 
         //----------------------------------------------------------------------
         // Resolve the qualifierflavor. Since Flavors are a combination of
@@ -250,12 +250,12 @@ void CIMQualifierList::resolve(
             }
             */
             // Do not allow change from disable override to enable override.
-            if ((!qd.getFlavor ().hasFlavor(CIMFlavor::OVERRIDABLE))
-                  && (q.getFlavor ().hasFlavor(CIMFlavor::OVERRIDABLE)))
-            {
-                PEG_METHOD_EXIT();
-                throw BadQualifierOverride(q.getName().getString ());
-            }
+            //if ((!qd.getFlavor ().hasFlavor(CIMFlavor::OVERRIDABLE))
+            //      && (q.getFlavor ().hasFlavor(CIMFlavor::OVERRIDABLE)))
+            //{
+            //    PEG_METHOD_EXIT();
+            //    throw BadQualifierOverride(q.getName().getString ());
+            //}
 
             Resolver::resolveQualifierFlavor(
                 q, CIMFlavor (qd.getFlavor ()));
@@ -264,25 +264,25 @@ void CIMQualifierList::resolve(
         {   ////// Make Const again
             CIMQualifier iq = inheritedQualifiers.getQualifier(index);
             // don't allow change override to notoverride.
-            if (!(iq.getFlavor ().hasFlavor(CIMFlavor::OVERRIDABLE))
-                  && q.getFlavor ().hasFlavor (CIMFlavor::OVERRIDABLE))
-            {
-                PEG_METHOD_EXIT();
-                throw BadQualifierOverride(q.getName().getString ());
-            }
+            //if (!(iq.getFlavor ().hasFlavor(CIMFlavor::OVERRIDABLE))
+            //      && q.getFlavor ().hasFlavor (CIMFlavor::OVERRIDABLE))
+            //{
+            //    PEG_METHOD_EXIT();
+            //    throw BadQualifierOverride(q.getName().getString ());
+            //}
 
-            if (!(iq.getFlavor ().hasFlavor(CIMFlavor::OVERRIDABLE))
-                  && iq.getFlavor ().hasFlavor(CIMFlavor::TOSUBCLASS))
-            {
-                // test if values the same.
-                CIMValue qv = q.getValue();
-                CIMValue iqv = iq.getValue();
-                if (!(qv == iqv))
-                {
-                    PEG_METHOD_EXIT();
-                    throw BadQualifierOverride(q.getName().getString());
-                }
-            }
+            //if (!(iq.getFlavor ().hasFlavor(CIMFlavor::OVERRIDABLE))
+            //      && iq.getFlavor ().hasFlavor(CIMFlavor::TOSUBCLASS))
+            //{
+            //    // test if values the same.
+            //    CIMValue qv = q.getValue();
+            //    CIMValue iqv = iq.getValue();
+            //    if (!(qv == iqv))
+            //    {
+            //        PEG_METHOD_EXIT();
+            //        throw BadQualifierOverride(q.getName().getString());
+            //    }
+            //}
 
             Resolver::resolveQualifierFlavor(
                 q, CIMFlavor(iq.getFlavor()));
