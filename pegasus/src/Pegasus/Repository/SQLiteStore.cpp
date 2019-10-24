@@ -494,20 +494,20 @@ void SQLiteStore::createNameSpace(
         String ns = nameSpace.getString();
 
         CHECK_RC_OK(
-            sqlite3_bind_text16(
-                stmt, 1, ns.getChar16Data(), ns.size() * 2, SQLITE_STATIC),
+            sqlite3_bind_text(
+                stmt, 1, ns.getCString(), ns.size(), SQLITE_TRANSIENT),
             db.get());
         CHECK_RC_OK(
             sqlite3_bind_int(stmt, 2, shareable? 1 : 0), db.get());
         CHECK_RC_OK(
             sqlite3_bind_int(stmt, 3, updatesAllowed? 1 : 0), db.get());
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+			sqlite3_bind_text(
                 stmt,
                 4,
-                parentNameSpace.getChar16Data(),
-                parentNameSpace.size() * 2,
-                SQLITE_STATIC),
+                parentNameSpace.getCString(),
+                parentNameSpace.size(),
+				SQLITE_TRANSIENT),
             db.get());
 
        String remoteId;
@@ -519,12 +519,12 @@ void SQLiteStore::createNameSpace(
        }
 #endif
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 5,
-                remoteId.getChar16Data(),
-                remoteId.size() * 2,
-                SQLITE_STATIC),
+                remoteId.getCString(),
+                remoteId.size(),
+				SQLITE_TRANSIENT),
             db.get());
 
         CHECK_RC_DONE(sqlite3_step(stmt), db.get());
@@ -595,8 +595,8 @@ void SQLiteStore::modifyNameSpaceName(
     AutoPtr<sqlite3_stmt, FinalizeSQLiteStatement> stmtDestroyer(stmt);
 
     CHECK_RC_OK(
-            sqlite3_bind_text16(
-                stmt, 1, ns.getChar16Data(), ns.size() * 2, SQLITE_STATIC),
+            sqlite3_bind_text(
+                stmt, 1, ns.getCString(), ns.size(), SQLITE_TRANSIENT),
             db.get());
     CHECK_RC_DONE(sqlite3_step(stmt), db.get());
 
@@ -690,12 +690,12 @@ CIMQualifierDecl SQLiteStore::getQualifier(
     String qualname = _getNormalizedName(qualifierName);
 
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             1,
-            qualname.getChar16Data(),
-            qualname.size() * 2,
-            SQLITE_STATIC),
+            qualname.getCString(),
+            qualname.size(),
+			SQLITE_TRANSIENT),
         db.get());
 
     int rc;
@@ -755,20 +755,20 @@ void SQLiteStore::setQualifier(
     _streamer->encode(data, qualifierDecl);
 
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             1,
-            qualname.getChar16Data(),
-            qualname.size() * 2,
-            SQLITE_STATIC),
+            qualname.getCString(),
+            qualname.size(),
+			SQLITE_TRANSIENT),
         db.get());
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             2,
-            normqualname.getChar16Data(),
-            normqualname.size() * 2,
-            SQLITE_STATIC),
+            normqualname.getCString(),
+            normqualname.size(),
+			SQLITE_TRANSIENT),
         db.get());
     CHECK_RC_OK(
         sqlite3_bind_blob(
@@ -812,12 +812,12 @@ void SQLiteStore::deleteQualifier(
     String qualname = _getNormalizedName(qualifierName);
 
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             1,
-            qualname.getChar16Data(),
-            qualname.size() * 2,
-            SQLITE_STATIC),
+            qualname.getCString(),
+            qualname.size(),
+			SQLITE_TRANSIENT),
         db.get());
 
     CHECK_RC_DONE(sqlite3_step(stmt), db.get());
@@ -888,12 +888,12 @@ CIMClass SQLiteStore::getClass(
     String classname = _getNormalizedName(className);
 
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             1,
-            classname.getChar16Data(),
-            classname.size() * 2,
-            SQLITE_STATIC),
+            classname.getCString(),
+            classname.size(),
+			SQLITE_TRANSIENT),
         db.get());
 
     int rc = sqlite3_step(stmt);
@@ -949,28 +949,28 @@ void SQLiteStore::createClass(
     _streamer->encode(data, newClass);
 
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             1,
-            classname.getChar16Data(),
-            classname.size() * 2,
-            SQLITE_STATIC),
+            classname.getCString(),
+            classname.size() ,
+			SQLITE_TRANSIENT),
         db.get());
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             2,
-            normclassname.getChar16Data(),
-            normclassname.size() * 2,
-            SQLITE_STATIC),
+            normclassname.getCString(),
+            normclassname.size(),
+			SQLITE_TRANSIENT),
         db.get());
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             3,
-            superclassname.getChar16Data(),
-            superclassname.size() * 2,
-            SQLITE_STATIC),
+            superclassname.getCString(),
+            superclassname.size(),
+			SQLITE_TRANSIENT),
         db.get());
     CHECK_RC_OK(
         sqlite3_bind_blob(stmt, 4, data.getData(), data.size(), SQLITE_STATIC),
@@ -1022,12 +1022,12 @@ void SQLiteStore::modifyClass(
         sqlite3_bind_blob(stmt, 1, data.getData(), data.size(), SQLITE_STATIC),
         db.get());
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             2,
-            normclassname.getChar16Data(),
-            normclassname.size() * 2,
-            SQLITE_STATIC),
+            normclassname.getCString(),
+            normclassname.size(),
+			SQLITE_TRANSIENT),
         db.get());
 
     CHECK_RC_DONE(sqlite3_step(stmt), db.get());
@@ -1083,12 +1083,12 @@ void SQLiteStore::deleteClass(
     String normclassname = _getNormalizedName(className);
 
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             1,
-            normclassname.getChar16Data(),
-            normclassname.size() * 2,
-            SQLITE_STATIC),
+            normclassname.getCString(),
+            normclassname.size(),
+            SQLITE_TRANSIENT),
         db.get());
 
     CHECK_RC_DONE(sqlite3_step(stmt), db.get());
@@ -1132,12 +1132,12 @@ Array<CIMObjectPath> SQLiteStore::enumerateInstanceNamesForClass(
     String classname = _getNormalizedName(className);
 
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             1,
-            classname.getChar16Data(),
-            classname.size() * 2,
-            SQLITE_STATIC),
+            classname.getCString(),
+            classname.size(),
+            SQLITE_TRANSIENT),
         db.get());
 
     int rc;
@@ -1180,12 +1180,12 @@ Array<CIMInstance> SQLiteStore::enumerateInstancesForClass(
     String classname = _getNormalizedName(className);
 
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             1,
-            classname.getChar16Data(),
-            classname.size() * 2,
-            SQLITE_STATIC),
+            classname.getCString(),
+            classname.size(),
+            SQLITE_TRANSIENT),
         db.get());
 
     int rc;
@@ -1235,12 +1235,12 @@ CIMInstance SQLiteStore::getInstance(
     String norminstname = instanceName._toStringCanonical();
 
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             1,
-            norminstname.getChar16Data(),
-            norminstname.size() * 2,
-            SQLITE_STATIC),
+            norminstname.getCString(),
+            norminstname.size(),
+            SQLITE_TRANSIENT),
         db.get());
 
     int rc = sqlite3_step(stmt);
@@ -1297,28 +1297,28 @@ void SQLiteStore::createInstance(
     _streamer->encode(data, cimInstance);
 
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             1,
-            classname.getChar16Data(),
-            classname.size() * 2,
-            SQLITE_STATIC),
+            classname.getCString(),
+            classname.size(),
+            SQLITE_TRANSIENT),
         db.get());
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             2,
-            instname.getChar16Data(),
-            instname.size() * 2,
-            SQLITE_STATIC),
+            instname.getCString(),
+            instname.size(),
+            SQLITE_TRANSIENT),
         db.get());
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             3,
-            norminstname.getChar16Data(),
-            norminstname.size() * 2,
-            SQLITE_STATIC),
+            norminstname.getCString(),
+            norminstname.size(),
+            SQLITE_TRANSIENT),
         db.get());
     CHECK_RC_OK(
         sqlite3_bind_blob(stmt, 4, data.getData(), data.size(), SQLITE_STATIC),
@@ -1375,12 +1375,12 @@ void SQLiteStore::modifyInstance(
         sqlite3_bind_blob(stmt, 1, data.getData(), data.size(), SQLITE_STATIC),
         db.get());
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             2,
-            norminstname.getChar16Data(),
-            norminstname.size() * 2,
-            SQLITE_STATIC),
+            norminstname.getCString(),
+            norminstname.size(),
+            SQLITE_TRANSIENT),
         db.get());
 
     CHECK_RC_DONE(sqlite3_step(stmt), db.get());
@@ -1418,12 +1418,12 @@ void SQLiteStore::deleteInstance(
     String norminstname = instanceName._toStringCanonical();
 
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             1,
-            norminstname.getChar16Data(),
-            norminstname.size() * 2,
-            SQLITE_STATIC),
+            norminstname.getCString(),
+            norminstname.size(),
+            SQLITE_TRANSIENT),
         db.get());
 
     CHECK_RC_DONE(sqlite3_step(stmt), db.get());
@@ -1462,12 +1462,12 @@ Boolean SQLiteStore::instanceExists(
     String norminstname = instanceName._toStringCanonical();
 
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             1,
-            norminstname.getChar16Data(),
-            norminstname.size() * 2,
-            SQLITE_STATIC),
+            norminstname.getCString(),
+            norminstname.size(),
+            SQLITE_TRANSIENT),
         db.get());
 
     int rc = sqlite3_step(stmt);
@@ -1576,60 +1576,60 @@ void SQLiteStore::_addClassAssociationEntries(
             classAssocEntries[i].toPropertyName);
 
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 1,
-                assocclassname.getChar16Data(),
-                assocclassname.size() * 2,
-                SQLITE_STATIC),
+                assocclassname.getCString(),
+                assocclassname.size(),
+                SQLITE_TRANSIENT),
             db);
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 2,
-                normassocclassname.getChar16Data(),
-                normassocclassname.size() * 2,
-                SQLITE_STATIC),
+                normassocclassname.getCString(),
+                normassocclassname.size(),
+                SQLITE_TRANSIENT),
             db);
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 3,
-                normfromclassname.getChar16Data(),
-                normfromclassname.size() * 2,
-                SQLITE_STATIC),
+                normfromclassname.getCString(),
+                normfromclassname.size(),
+                SQLITE_TRANSIENT),
             db);
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 4,
-                normfrompropname.getChar16Data(),
-                normfrompropname.size() * 2,
-                SQLITE_STATIC),
+                normfrompropname.getCString(),
+                normfrompropname.size(),
+                SQLITE_TRANSIENT),
             db);
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 5,
-                toclassname.getChar16Data(),
-                toclassname.size() * 2,
-                SQLITE_STATIC),
+                toclassname.getCString(),
+                toclassname.size(),
+                SQLITE_TRANSIENT),
             db);
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 6,
-                normtoclassname.getChar16Data(),
-                normtoclassname.size() * 2,
-                SQLITE_STATIC),
+                normtoclassname.getCString(),
+                normtoclassname.size(),
+                SQLITE_TRANSIENT),
             db);
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 7,
-                normtopropname.getChar16Data(),
-                normtopropname.size() * 2,
-                SQLITE_STATIC),
+                normtopropname.getCString(),
+                normtopropname.size(),
+                SQLITE_TRANSIENT),
             db);
 
         CHECK_RC_DONE(sqlite3_step(stmt), db);
@@ -1680,12 +1680,12 @@ void SQLiteStore::_removeClassAssociationEntries(
     String normassocclassname = _getNormalizedName(assocClassName);
 
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             1,
-            normassocclassname.getChar16Data(),
-            normassocclassname.size() * 2,
-            SQLITE_STATIC),
+            normassocclassname.getCString(),
+            normassocclassname.size(),
+            SQLITE_TRANSIENT),
         db);
 
     CHECK_RC_DONE(sqlite3_step(stmt), db);
@@ -1798,11 +1798,11 @@ void SQLiteStore::getClassAssociatorNames(
     {
         String normfromclassname = _getNormalizedName(classList[i]);
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 bindIndex++,
-                normfromclassname.getChar16Data(),
-                normfromclassname.size() * 2,
+                normfromclassname.getCString(),
+                normfromclassname.size(),
                 SQLITE_TRANSIENT),
             db.get());
     }
@@ -1811,11 +1811,11 @@ void SQLiteStore::getClassAssociatorNames(
     {
         String normfrompropname = _getNormalizedName(CIMNameCast(role));
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 bindIndex++,
-                normfrompropname.getChar16Data(),
-                normfrompropname.size() * 2,
+                normfrompropname.getCString(),
+                normfrompropname.size(),
                 SQLITE_TRANSIENT),
             db.get());
     }
@@ -1825,11 +1825,11 @@ void SQLiteStore::getClassAssociatorNames(
         String normtopropname =
             _getNormalizedName(CIMNameCast(resultRole));
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 bindIndex++,
-                normtopropname.getChar16Data(),
-                normtopropname.size() * 2,
+                normtopropname.getCString(),
+                normtopropname.size(),
                 SQLITE_TRANSIENT),
             db.get());
     }
@@ -1838,11 +1838,11 @@ void SQLiteStore::getClassAssociatorNames(
     {
         String normassocclassname = _getNormalizedName(assocClassList[i]);
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 bindIndex++,
-                normassocclassname.getChar16Data(),
-                normassocclassname.size() * 2,
+                normassocclassname.getCString(),
+                normassocclassname.size(),
                 SQLITE_TRANSIENT),
             db.get());
     }
@@ -1851,11 +1851,11 @@ void SQLiteStore::getClassAssociatorNames(
     {
         String normtopropname = _getNormalizedName(resultClassList[i]);
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 bindIndex++,
-                normtopropname.getChar16Data(),
-                normtopropname.size() * 2,
+                normtopropname.getCString(),
+                normtopropname.size(),
                 SQLITE_TRANSIENT),
             db.get());
     }
@@ -1957,11 +1957,11 @@ void SQLiteStore::getClassReferenceNames(
     {
         String normfromclassname = _getNormalizedName(classList[i]);
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 bindIndex++,
-                normfromclassname.getChar16Data(),
-                normfromclassname.size() * 2,
+                normfromclassname.getCString(),
+                normfromclassname.size(),
                 SQLITE_TRANSIENT),
             db.get());
     }
@@ -1970,11 +1970,11 @@ void SQLiteStore::getClassReferenceNames(
     {
         String normfrompropname = _getNormalizedName(CIMNameCast(role));
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 bindIndex++,
-                normfrompropname.getChar16Data(),
-                normfrompropname.size() * 2,
+                normfrompropname.getCString(),
+                normfrompropname.size(),
                 SQLITE_TRANSIENT),
             db.get());
     }
@@ -1983,11 +1983,11 @@ void SQLiteStore::getClassReferenceNames(
     {
         String normassocclassname = _getNormalizedName(resultClassList[i]);
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 bindIndex++,
-                normassocclassname.getChar16Data(),
-                normassocclassname.size() * 2,
+                normassocclassname.getCString(),
+                normassocclassname.size(),
                 SQLITE_TRANSIENT),
             db.get());
     }
@@ -2048,68 +2048,68 @@ void SQLiteStore::_addInstanceAssociationEntries(
             instanceAssocEntries[i].toPropertyName);
 
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 1,
-                associnstname.getChar16Data(),
-                associnstname.size() * 2,
-                SQLITE_STATIC),
+                associnstname.getCString(),
+                associnstname.size(),
+                SQLITE_TRANSIENT),
             db);
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 2,
-                normassocinstname.getChar16Data(),
-                normassocinstname.size() * 2,
-                SQLITE_STATIC),
+                normassocinstname.getCString(),
+                normassocinstname.size(),
+                SQLITE_TRANSIENT),
             db);
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 3,
-                normassocclassname.getChar16Data(),
-                normassocclassname.size() * 2,
-                SQLITE_STATIC),
+                normassocclassname.getCString(),
+                normassocclassname.size(),
+                SQLITE_TRANSIENT),
             db);
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 4,
-                normfrominstname.getChar16Data(),
-                normfrominstname.size() * 2,
-                SQLITE_STATIC),
+                normfrominstname.getCString(),
+                normfrominstname.size(),
+                SQLITE_TRANSIENT),
             db);
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 5,
-                normfrompropname.getChar16Data(),
-                normfrompropname.size() * 2,
-                SQLITE_STATIC),
+                normfrompropname.getCString(),
+                normfrompropname.size(),
+                SQLITE_TRANSIENT),
             db);
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 6,
-                toinstname.getChar16Data(),
-                toinstname.size() * 2,
-                SQLITE_STATIC),
+                toinstname.getCString(),
+                toinstname.size(),
+                SQLITE_TRANSIENT),
             db);
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 7,
-                normtoclassname.getChar16Data(),
-                normtoclassname.size() * 2,
-                SQLITE_STATIC),
+                normtoclassname.getCString(),
+                normtoclassname.size(),
+                SQLITE_TRANSIENT),
             db);
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 8,
-                normtopropname.getChar16Data(),
-                normtopropname.size() * 2,
-                SQLITE_STATIC),
+                normtopropname.getCString(),
+                normtopropname.size(),
+                SQLITE_TRANSIENT),
             db);
 
         CHECK_RC_DONE(sqlite3_step(stmt), db);
@@ -2142,12 +2142,12 @@ void SQLiteStore::_removeInstanceAssociationEntries(
     String associnstname = assocInstanceName._toStringCanonical();
 
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             1,
-            associnstname.getChar16Data(),
-            associnstname.size() * 2,
-            SQLITE_STATIC),
+            associnstname.getCString(),
+            associnstname.size(),
+            SQLITE_TRANSIENT),
         db);
 
     CHECK_RC_DONE(sqlite3_step(stmt), db);
@@ -2232,23 +2232,23 @@ void SQLiteStore::getInstanceAssociatorNames(
     int bindIndex = 1;
 
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             bindIndex++,
-            normfrominstname.getChar16Data(),
-            normfrominstname.size() * 2,
-            SQLITE_STATIC),
+            normfrominstname.getCString(),
+            normfrominstname.size(),
+            SQLITE_TRANSIENT),
         db.get());
 
     if (role.size())
     {
         String normfrompropname = _getNormalizedName(CIMNameCast(role));
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 bindIndex++,
-                normfrompropname.getChar16Data(),
-                normfrompropname.size() * 2,
+                normfrompropname.getCString(),
+                normfrompropname.size(),
                 SQLITE_TRANSIENT),
             db.get());
     }
@@ -2258,11 +2258,11 @@ void SQLiteStore::getInstanceAssociatorNames(
         String normtopropname =
             _getNormalizedName(CIMNameCast(resultRole));
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 bindIndex++,
-                normtopropname.getChar16Data(),
-                normtopropname.size() * 2,
+                normtopropname.getCString(),
+                normtopropname.size(),
                 SQLITE_TRANSIENT),
             db.get());
     }
@@ -2271,11 +2271,11 @@ void SQLiteStore::getInstanceAssociatorNames(
     {
         String normassocclassname = _getNormalizedName(assocClassList[i]);
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 bindIndex++,
-                normassocclassname.getChar16Data(),
-                normassocclassname.size() * 2,
+                normassocclassname.getCString(),
+                normassocclassname.size(),
                 SQLITE_TRANSIENT),
             db.get());
     }
@@ -2284,11 +2284,11 @@ void SQLiteStore::getInstanceAssociatorNames(
     {
         String normtoclassname = _getNormalizedName(resultClassList[i]);
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 bindIndex++,
-                normtoclassname.getChar16Data(),
-                normtoclassname.size() * 2,
+                normtoclassname.getCString(),
+                normtoclassname.size(),
                 SQLITE_TRANSIENT),
             db.get());
     }
@@ -2360,23 +2360,23 @@ void SQLiteStore::getInstanceReferenceNames(
     int bindIndex = 1;
 
     CHECK_RC_OK(
-        sqlite3_bind_text16(
+        sqlite3_bind_text(
             stmt,
             bindIndex++,
-            normfrominstname.getChar16Data(),
-            normfrominstname.size() * 2,
-            SQLITE_STATIC),
+            normfrominstname.getCString(),
+            normfrominstname.size(),
+            SQLITE_TRANSIENT),
         db.get());
 
     if (role.size())
     {
         String normfrompropname = _getNormalizedName(CIMNameCast(role));
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 bindIndex++,
-                normfrompropname.getChar16Data(),
-                normfrompropname.size() * 2,
+                normfrompropname.getCString(),
+                normfrompropname.size(),
                 SQLITE_TRANSIENT),
             db.get());
     }
@@ -2385,11 +2385,11 @@ void SQLiteStore::getInstanceReferenceNames(
     {
         String normassocclassname = _getNormalizedName(resultClassList[i]);
         CHECK_RC_OK(
-            sqlite3_bind_text16(
+            sqlite3_bind_text(
                 stmt,
                 bindIndex++,
-                normassocclassname.getChar16Data(),
-                normassocclassname.size() * 2,
+                normassocclassname.getCString(),
+                normassocclassname.size(),
                 SQLITE_TRANSIENT),
             db.get());
     }
