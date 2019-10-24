@@ -291,6 +291,51 @@ static void _processFile(CIMRepository &repository, const char* xmlFileName)
 	}
 }
 
+
+static void _processDirectory(CIMRepository &repository, const char* dir) {
+	Array<String> filenames;
+	if (!FileSystem::glob(dir, "*.xml", filenames)) {
+		cout << " read directory fail: " << dir << endl;
+		return ;
+	}
+
+
+	for (; filenames.size() > 0;)
+	{
+		Array<String> remain;
+
+		for (int i = 0; i < filenames.size(); i++)
+		{
+			try
+			{
+				_processFile(repository, filenames[i].getCString());
+				cout << filenames[i] << " loaded." << endl;
+			}
+			catch (const Exception& e)
+			{
+				remain.append(filenames[i]);
+			}
+		}
+
+		if (filenames.size() == remain.size()) {
+			for (int i = 0; i < filenames.size(); i++)
+			{
+				try
+				{
+					_processFile(repository, filenames[i].getCString());
+					cout << filenames[i] << " loaded." << endl;
+				}
+				catch (const Exception& e)
+				{
+					cerr << filenames[i] << ": " << e.getMessage() << endl;
+				}
+			}
+			return;
+		}
+		filenames.clear();
+		filenames.appendArray(remain);
+	}
+}
 //------------------------------------------------------------------------------
 //
 // main()
@@ -299,96 +344,51 @@ static void _processFile(CIMRepository &repository, const char* xmlFileName)
 
 int main(int argc, char** argv)
 {
-    if (argc != 4)
+    if (argc < 4)
     {
         cerr << "Usage: " << argv[0]
-            << " repository-root xmlfile namespace" << endl;
+            << " repository-root namespace xmlfiles" << endl;
         exit(1);
     }
 
     verbose = getenv("PEGASUS_TEST_VERBOSE") ? true : false;
 
+	String repositoryRoot = argv[1];
+    namespaceName = argv[2];
 
+	CIMRepository repository(repositoryRoot);
+	try
+	{
+		repository.createNameSpace(namespaceName);
+	}
+	catch (Exception &e)
+	{
+		// Ignore if Namespace already exists
+		if (e.getMessage() != namespaceName)
+		{
+			cerr << e.getMessage() << endl;
+			return 1;
+		}
+	}
 
-    try
-    {
-		String repositoryRoot = argv[1];
-        namespaceName = argv[3];
-
-		CIMRepository repository(repositoryRoot);
+	for (int i = 3; i < argc; i++) 
+	{
 		try
 		{
-			repository.createNameSpace(namespaceName);
+			if (FileSystem::isDirectory(argv[i])) {
+				_processDirectory(repository, argv[i]);
+			}
+			else 
+			{
+				_processFile(repository, argv[i]);
+			}
+			cout << "file: " << argv[i] << endl;
 		}
-		catch (Exception &e)
+		catch (const Exception& e)
 		{
-			// Ignore if Namespace already exists
-			if (e.getMessage() != namespaceName)
-			{
-				throw;
-			}
+			cerr << e.getMessage() << endl;
 		}
-
-
-		cout << argv[0] << " loading " << argv[2] << " to namespace "
-			<< namespaceName << " into repository " << argv[1] << endl;
-
-		if (FileSystem::isDirectory(argv[2])) {
-			Array<String> filenames;
-			if (!FileSystem::glob(argv[2], "*.xml", filenames)) {
-				cout << " read directory fail: " << argv[1] << endl;
-				return 1;
-			}
-
-
-			for (; filenames.size() > 0;)
-			{
-				Array<String> remain;
-
-				for (int i = 0; i < filenames.size(); i++)
-				{
-					try
-					{
-						_processFile(repository, filenames[i].getCString());
-						cout << filenames[i] << " loaded." << endl;
-					}
-					catch (const Exception& e)
-					{
-						remain.append(filenames[i]);
-					}
-				}
-
-				if (filenames.size() == remain.size()) {
-					for (int i = 0; i < filenames.size(); i++)
-					{
-						try
-						{
-							_processFile(repository, filenames[i].getCString());
-							cout << filenames[i] << " loaded." << endl;
-						}
-						catch (const Exception& e)
-						{
-							cerr << filenames[i] << ": " << e.getMessage() << endl;
-						}
-					}
-					return 1;
-				}
-				filenames.clear();
-				filenames.appendArray(remain);
-			}
-
-			return 0;
-		}
-
-
-        _processFile(repository, argv[2]);
-        cout << argv[0] << " loaded." << endl;
-    }
-    catch (const Exception& e)
-    {
-        cerr << e.getMessage() << endl;
-        exit(1);
-    }
+	}
 
     return 0;
 }

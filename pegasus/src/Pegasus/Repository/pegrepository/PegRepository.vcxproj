@@ -155,6 +155,7 @@
     <ClCompile Include="..\InstanceIndexFile.cpp" />
     <ClCompile Include="..\NameSpaceManager.cpp" />
     <ClCompile Include="..\RepositoryDeclContext.cpp" />
+    <ClCompile Include="..\SQLiteStore.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\AssocClassTable.h" />
@@ -166,6 +167,7 @@
     <ClInclude Include="..\InstanceIndexFile.h" />
     <ClInclude Include="..\NameSpaceManager.h" />
     <ClInclude Include="..\RepositoryDeclContext.h" />
+    <ClInclude Include="..\SQLiteStore.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Common\PegCommon\PegCommon.vcxproj">

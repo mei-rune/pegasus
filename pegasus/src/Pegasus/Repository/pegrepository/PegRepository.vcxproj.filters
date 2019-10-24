@@ -39,6 +39,9 @@
     <ClCompile Include="..\RepositoryDeclContext.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\SQLiteStore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\AssocClassTable.h">
@@ -66,6 +69,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\RepositoryDeclContext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SQLiteStore.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
